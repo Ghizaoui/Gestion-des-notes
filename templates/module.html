@@ -1,0 +1,29 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{% if session.logged_in %}
+
+<nav>
+<ul>
+<li> <a href="acceuil.html"> Acceuil </a></li>
+<li> <a href="specialite.html"> Specialites </a></li>
+<li><a href="etudiant.html"> Etudiants </a> </li>
+<li><a href="matiere.html">  Matieres </a> </li>
+<li><a href="module.html"> Modules </a> </li>
+<li><a href="note.html"> Notes </a> </li>
+<li><a href="">Déconnexion</a> </li>
+</ul>
+</nav>
+<h1> Gestion des modules </h1>
+<a href="ajoutermodule.html"> <h3> Ajouter module </h3> </a>
+<a href="modifiermodule.html"> <h3> Modifier module </h3> </a>
+<a href="supprimermodule.html"> <h3> Supprimer module </h3> </a>
+<a href="consultermodule.html"> <h3> Consulter module </h3> </a>
+{% else %}
+ <h2> <a href={{url_for('logout')}}> Veuillez vous identifier pour accéder à l'application .</a></h2>  
+{% endif %}
+</body>
+
+</html>

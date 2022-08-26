@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<form action={{url_for('supprimer1',code,cin)}} method=POST >
+<table>
+<tr>
+<th>CIN </th>
+<th> DS </th>
+<th> Examan </th>
+</tr>
+<tr>
+<td> {{cin}} </td>
+<td> <input type=text name=ds> </td>
+<td> <input type=text name=ex> </td>
+</tr>
+</table>
+<input type=submit value=Submit>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1> Entrer une note </h1>
+<form action="/note2/{{classe}},{{specialite}},{{mat}}" method="POST">
+<table>
+<tr>
+<th>CIN </th> 
+<th>Note TP </th> 
+<th> Note DS </th>
+<th> Note Examan </th>
+</tr>
+<tr>
+<td> <input type=text name=cin />  </td>
+<td> <input type=text name=tp />  </td>
+<td> <input type=text name=ds />  </td>
+<td> <input type=text name=ex />  </td>
+</tr>
+</table>
+<button> Ajouter </button>
+</form>
+
+</body>
+</html>

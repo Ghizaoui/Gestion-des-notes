@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+<form action=/ajoutermatmod method=POST>
+<h3> Choisir une matiere pourl'ajouter au module </h3>
+<select name="mat">{% for x in userDetails %} <option value={{x[0]}}> {{x[1]}} </option>
+</select>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

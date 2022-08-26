@@ -1,0 +1,27 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1> Modifier Specialite </h1>
+<form action="/modifierspec" method="POST">
+
+<table>
+<tr>
+<td> Nom: </td>
+<td><select name="nom"> {% for x in userDetails %} <option value={{x[0]}}> {{x[1]}} </option> {% endfor %} </select> </td>
+</tr>
+<tr>
+<td> Nouveau nom:  </td> <td> <input type="text" name="newname" /> </td>
+</tr>
+</table>
+
+
+
+<input type="submit" value="Modifier" />
+
+
+
+</form>
+</body>
+</html>

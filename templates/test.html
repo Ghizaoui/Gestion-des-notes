@@ -1,0 +1,70 @@
+<html>
+<head>
+</head>
+<table id=note border=1>
+<tr>
+<th>test1 </th>
+<th>test2</th>
+</tr>
+<tr>
+<th>test3</th>
+<th>test4</th>
+</tr>
+
+
+</table>
+</html>
+<!--
+<html>
+<head>
+<script language="javascript">
+function bascule(id)
+{
+etat=document.getElementById(id).style.visibility;
+if(etat=="hidden"){document.getElementById(id).style.visibility="visible";}
+else {document.getElementById(id).style.visibility="hidden";}
+}
+</script>
+</head>
+<body>
+<h1> Choisir le groupe à noter </h1>
+<form action=/notetudiant method=POST>
+Classe :<input type=radio name=classe value=1 /> 1
+	<input type=radio name=classe value=2 /> 2
+	<input type=radio name=classe value=3 /> 3 <br>
+
+Specialite: <select name=specialite>
+{% for x in userDetails %}
+<option value={{x[0]}} > {{x[1]}} </option> {% endfor %} </select>
+<button onclick="bascule('id');"> recherche </button>
+
+</form>
+
+
+<div name="id" id="id" >
+<form action=/ajouternote/{{specialite}},{{classe}} method=POST>
+<h1> Ajouter une note </h1>
+<table border=1>
+<th> CIN </th>
+<th>Nom: </th>
+<th> Prenom </th>
+<th>Note DS</th>
+<th>Note Examan</th>
+</tr>
+{% for x in etudDetails %}
+<tr>
+<th> {{x[0]}} </th>
+<th> {{x[1]}} </th>
+<th> {{x[2]}} </th>
+<th> <input type=text name=ds /> </th>
+<th><input type=text name=ex /></th>
+</tr>
+{% endfor %}
+</table>
+<button> <a href=ajouternote/{{specialite}},{{classe}}> ajouter </a></button>
+</form>
+</div>
+</body>
+</html>
+-->
+

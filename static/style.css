@@ -1,0 +1,8 @@
+ul li {display:inline;list-style-type:none;margin-left:0px;}
+nav {margin-top:40px;margin-left:0px;word-spacing:60px;box-shadow:0 10px 20px #000;height:60px;font-size:30px}
+body{background-image:url(img.jpeg);background-repeat:no-repeat;background-size:cover ;}
+h1,h3{text-align:center;}
+h3{color:#ffef96;}
+fieldset{height:300px;width:200px;font-size:30px;line-height:45px;margin: 0 auto;    }
+legend{font-size:35px;color:#008080;}
+

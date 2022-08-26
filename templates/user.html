@@ -1,0 +1,37 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1> la liste des étudiants </h1>
+<table border=1>
+<tr> 
+<th>CIN </th>
+<th> Nom </th>
+<th>Prenom </th>
+<th>Téléphone </th>
+<th>Email </th>
+<th>Adresse </th>
+<th>Classe </th>
+<th>Spécialite </th>
+<th>Date de Naissance </th>
+<th></th>
+</tr>
+{% for user in userDetails %}
+<tr>
+<td> {{user[0]}} </td>
+<td> {{user[1]}} </td>
+<td> {{user[2]}} </td>
+<td> {{user[7]}} </td>
+<td> {{user[8]}} </td>
+<td> {{user[9]}} </td>
+<td> {{user[3]}} </td>
+<td> {{user[10]}} </td>
+<td> {{user[4]}} </td>
+<td> {{user[11]}} </td>
+<td><a href=modifieretudiant.html/{{user[0]}} > Modifier </a></td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

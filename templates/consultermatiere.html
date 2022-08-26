@@ -1,0 +1,30 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1> La liste des matiéres </h1>
+<table border=1 align=center>
+<tr>
+<th> Code </th>
+<th> Nom </th>
+<th>Classe</th>
+<th>Niveau</th>
+<th>Specialite</th>
+<th>Semestre</th>
+<th></th>
+</tr>
+{% for x in userDetails %}
+<tr>
+<th> {{x[0]}} </th>
+<th> {{x[1]}} </th>
+<th> {{x[3]}} </th>
+<th> {{x[2]}} </th>
+<th> {{x[7]}} </th>
+<th> {{x[5]}} </th>
+<th> <a href=modifiermatiere.html/{{x[0]}} > Modifer </a> </th>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

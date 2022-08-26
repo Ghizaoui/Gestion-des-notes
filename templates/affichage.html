@@ -1,0 +1,45 @@
+<html>
+<head>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1> Buletin </h1>
+<h3> Nom:{{data[1]}} </h3>
+<h3> Prenom:{{data[2]}} </h3>
+<h3> Specialite:{{data[11]}} </h3>
+<h3> Groupe:{{data[3]}}</h3>
+<table border=1 align=center>
+<tr>
+<th> Matieres </h1>
+<th> Note TP </th>
+<th> Note DS </th>
+<th> Note Examan </th>
+<th> MOyenne </th>
+</tr>
+{% for x in mat %}
+	<tr>
+	<th> {{x[1]}} </th>
+	{% for y in note %}
+		{% if x[2] == 'DsExaman' %}
+			<td></td>
+			{% if x[0]== y[1] %}
+				<td>{{y[3]}}</td>
+				<td>{{y[4]}}</td>
+				<td>{{y[5]}}</td>
+			{% endif %}
+		{% else %}		
+			{% if x[0]== y[1] %}
+				<td>{{y[2]}}</td>
+				<td>{{y[3]}}</td>
+				<td>{{y[4]}}</td>
+				<td>{{y[5]}}</td>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+       </tr>
+{% endfor %}
+
+
+
+</body>
+</html>
